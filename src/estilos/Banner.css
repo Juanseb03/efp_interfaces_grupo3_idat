@@ -1,0 +1,38 @@
+.contenedor-imagen {
+    position: relative;
+    height: 200px;
+    background: url("../imagenes/Fondo.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    filter: 
+    blur(0.5px)
+    brightness(0.7)
+    contrast(2);
+    z-index: -2;
+}
+
+/* Capa oscura encima de la imagen */
+.contenedor-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(23, 42, 80, 0.5);
+    z-index: 1;
+}
+
+/* Frase encima de todo */
+.frase {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    padding: 20px 20px;
+}
+
+.frase h2 {
+    font-size: 55px;
+    font-weight: bold;
+    font-style: italic;
+}

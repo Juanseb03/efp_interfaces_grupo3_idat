@@ -1,0 +1,63 @@
+.boton {
+    font-weight: bold;
+    font-size: 15px;
+    width: 100%;
+    padding: 6px;
+    color: black;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    margin: 15px auto;
+    text-decoration: none;
+}
+
+.pequeno {
+  width: 45%;
+}
+
+.verde {
+    background-color: #27c24c;
+    color: white;
+}
+
+.anaranjado {
+    background-color: #ff9f49;
+    color: white;
+}
+
+.azul {
+    background-color: #5d9cec;
+    color: white;
+}
+
+.rojo {
+    background-color: #f05050;
+    color: white;
+}
+
+.boton-menu {
+  background-color: #3A3F51;
+  color: white;
+  width: 200px;
+  padding: 10px 25px;
+  transition: 0.2s;
+}
+
+.boton-menu:hover {
+  background: #4c566a;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.google-btn svg {
+  margin-right: 10px;
+  transform: translateY(2px);
+}

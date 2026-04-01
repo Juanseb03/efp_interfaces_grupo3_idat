@@ -1,0 +1,30 @@
+.tarjeta-conteo {
+    color: white;
+    text-shadow: var(--sombra);
+    padding: 1rem;
+    width: 425px;
+    margin: 25px 0px;
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-conteo h2 {
+    font-size: 50px;
+    margin: 0
+}
+
+.tarjeta-conteo p {
+    font-size: large;
+}
+
+/* COLORES */
+.verde-claro {
+    background-color: #37bc9b;
+}
+
+.azul {
+    background-color: #5d9cec;
+}
+
+.purpura {
+    background-color: #7266ba;
+}

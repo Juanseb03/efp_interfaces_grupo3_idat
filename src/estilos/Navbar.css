@@ -1,0 +1,22 @@
+/*NAVBAR*/
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 40px;
+  background: linear-gradient(to right, #0030CC, #00A1DA);
+}
+
+/* LOGO */
+.logo img {
+  height: 40px;
+}
+
+/* CONTENEDOR DE LOS BOTONES */
+.menu {
+  display: flex;
+  gap: 15px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}

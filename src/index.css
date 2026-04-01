@@ -1,0 +1,25 @@
+:root {
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding: 2rem;
+}
+
+.border {
+    border: 1px solid gray;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+hr {
+  border: none;
+  border: 1.5px solid #ccc;
+  margin: 20px;
+}

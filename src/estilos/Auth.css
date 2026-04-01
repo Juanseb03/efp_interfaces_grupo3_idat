@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.pagina-auth {
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*FONDO Y EFECTOS*/
+.pagina-auth::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("../imagenes/Fondo.jpg") no-repeat center center/cover;
+  filter: blur(0.5px) brightness(0.5) contrast(3);
+  z-index: -2;
+}
+
+/*CAPA ENCIMA DEL FONDO PARA DARLE EL COLOR */
+.pagina-auth::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(37, 55, 92, 0.5);
+  z-index: -1;
+}
