@@ -60,10 +60,31 @@ const Home = () => {
         setEntrada("")
     }
 
+    const generarID = () => {
+        let nuevoID = datosVisitas.length + 1
+        let unico = false
+
+        while (!unico) {
+            unico = true
+            for (let dato of datosVisitas) {
+                if (nuevoID === dato.idRegistro) {
+                    nuevoID++
+                    unico = false
+                    break
+                }
+            }
+        }
+
+        return nuevoID
+    }
+
     const registrarVisita = (e) => {
         e.preventDefault()
 
+        const nuevoID = generarID()
+
         const nuevoRegistro = {
+            idRegistro: nuevoID,
             nombre,
             apellido,
             motivo,

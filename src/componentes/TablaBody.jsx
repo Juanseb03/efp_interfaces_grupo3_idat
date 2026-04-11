@@ -7,6 +7,7 @@ import Button from "./Button";
 const TablaBody = ({ datosEnTabla, datos, setDatos, children }) => {
     const [ventanaAbierta, setVentanaAbierta] = useState(false);
 
+    const [idRegistro, setIDRegistro] = useState(null)
     const [nombre, setNombre] = useState("")
     const [apellido, setApellido] = useState("")
     const [motivo, setMotivo] = useState("AIRBNB")
@@ -16,6 +17,7 @@ const TablaBody = ({ datosEnTabla, datos, setDatos, children }) => {
     const [salida, setSalida] = useState("")
 
     const llenarCampos = (dato) => {
+        setIDRegistro(dato.idRegistro)
         setNombre(dato.nombre);
         setApellido(dato.apellido);
         setMotivo(dato.motivo);
@@ -28,11 +30,7 @@ const TablaBody = ({ datosEnTabla, datos, setDatos, children }) => {
     const actualizarDatos = () => {
         setDatos(() => {
             const datosActualizados = datos.map(dato => (
-                dato.nombre == nombre ||
-                dato.apellido == apellido ||
-                dato.motivo == motivo ||
-                dato.departamento == departamento ||
-                dato.observaciones == observaciones
+                idRegistro === dato.idRegistro
             ) ? {...dato, entrada, salida} : dato);
             return datosActualizados
         })
@@ -43,8 +41,8 @@ const TablaBody = ({ datosEnTabla, datos, setDatos, children }) => {
             <tr>
                 {children}
             </tr>
-            {datosEnTabla.map((dato, index) => (<>
-            <tr key={index} onClick={() => {setVentanaAbierta(() => {llenarCampos(dato); return true})}}>
+            {datosEnTabla.map((dato) => (<>
+            <tr key={dato.idRegistro} onClick={() => {setVentanaAbierta(() => {llenarCampos(dato); return true})}}>
                 <td>{dato.nombre}</td>
                 <td>{dato.apellido}</td>
                 <td>{dato.motivo}</td>
