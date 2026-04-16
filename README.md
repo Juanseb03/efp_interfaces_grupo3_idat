@@ -17,7 +17,7 @@ Ejecución:
 3. Una vez terminada la carga, ir a la consola y escribir "npm install".
 4. Finalmente, ejecutar el comando "npm run dev" o "npm start".
 
-Si la versión de Node es antigua, ejecutar en la terminal uno por uno (sin los guiones):
+Si la versión de Node es antigua, ejecutar en la terminal uno por uno:
 - nvm install 22
 - nvm use 22
 - nvm alias default 22
